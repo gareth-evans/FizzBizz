@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Text;
 
 namespace FizzBuzz
 {
@@ -10,6 +11,12 @@ namespace FizzBuzz
 
             for (var i = start; i <= count; i++)
             {
+                if (i.ToString().Contains("3"))
+                {
+                    sb.Append("lucky ");
+                    continue;
+                }
+
                 if (i % 3 == 0 && i % 5 == 0)
                 {
                     sb.Append("fizzbuzz ");
