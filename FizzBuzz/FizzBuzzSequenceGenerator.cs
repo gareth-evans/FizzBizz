@@ -2,7 +2,12 @@
 
 namespace FizzBuzz
 {
-    public class FizzBuzzSequenceGenerator
+    public interface IFizzBuzzSequenceGenerator
+    {
+        IEnumerable<object> GenerateFizzBuzzSequence(int start, int count);
+    }
+
+    public class FizzBuzzSequenceGenerator : IFizzBuzzSequenceGenerator
     {
         public IEnumerable<object> GenerateFizzBuzzSequence(int start, int count)
         {

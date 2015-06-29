@@ -5,11 +5,11 @@ namespace FizzBuzz
 {
     public class FizzBuzzMediator
     {
-        private readonly FizzBuzzSequenceGenerator _sequenceGenerator;
-        private readonly FizzBuzzFormatter _formatter;
+        private readonly IFizzBuzzSequenceGenerator _sequenceGenerator;
+        private readonly IFizzBuzzFormatter _formatter;
         private readonly TextWriter _textWriter;
 
-        public FizzBuzzMediator(FizzBuzzSequenceGenerator sequenceGenerator, FizzBuzzFormatter formatter, TextWriter textWriter)
+        public FizzBuzzMediator(IFizzBuzzSequenceGenerator sequenceGenerator, IFizzBuzzFormatter formatter, TextWriter textWriter)
         {
             if (sequenceGenerator == null) throw new ArgumentNullException("sequenceGenerator");
             if (formatter == null) throw new ArgumentNullException("formatter");
