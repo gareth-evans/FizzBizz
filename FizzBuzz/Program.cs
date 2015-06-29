@@ -6,10 +6,8 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            var fizzBuzzer = new FizzBuzzer();;
-            var result = fizzBuzzer.GenerateFizzBuzzString(1, 20);
-
-            Console.WriteLine(result);
+            var fizzBuzzer = new FizzBuzzMediator(new FizzBuzzSequenceGenerator(), new FizzBuzzFormatter(), Console.Out);
+            fizzBuzzer.GenerateFizzBuzzSequence(1, 20);
         }
     }
 }

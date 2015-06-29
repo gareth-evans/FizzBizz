@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratingFizzBuzzString.cs" />
+    <Compile Include="FormattingFizzBuzzSequence.cs" />
+    <Compile Include="GeneratingFizzBuzzSequence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
